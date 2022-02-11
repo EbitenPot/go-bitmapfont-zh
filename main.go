@@ -94,15 +94,15 @@ zh_Hant: 人人生而自由，在尊嚴和權利上一律平等。
 		}
 	}
 	return outputImageFile(text, *flagTest, path, nface, !*flagTest)
-	return nil
+	
 }
 
-func glyph(m draw.Image, f font.Face, r byte, off [2]int, x, y, w, h int) {
-	draw.Draw(m, image.Rect(x, y, x+w, y+h), &image.Uniform{C: color.White}, image.ZP, draw.Src)
-	dot := fixed.P(x+off[0], y+h+off[1])
-	dr, mask, mp, _, _ := f.Glyph(dot, rune(r))
-	draw.DrawMask(m, dr, &image.Uniform{C: color.Black}, image.ZP, mask, mp, draw.Src)
-}
+// func glyph(m draw.Image, f font.Face, r byte, off [2]int, x, y, w, h int) {
+// 	draw.Draw(m, image.Rect(x, y, x+w, y+h), &image.Uniform{C: color.White}, image.ZP, draw.Src)
+// 	dot := fixed.P(x+off[0], y+h+off[1])
+// 	dr, mask, mp, _, _ := f.Glyph(dot, rune(r))
+// 	draw.DrawMask(m, dr, &image.Uniform{C: color.Black}, image.ZP, mask, mp, draw.Src)
+// }
 
 func outputImageFile(text string, grid bool, path string, f font.Face, presentation bool) error {
 	const (
@@ -183,5 +183,5 @@ func outputImageFile(text string, grid bool, path string, f font.Face, presentat
 
 	return browser.OpenFile(path)
 
-	return nil
+	
 }

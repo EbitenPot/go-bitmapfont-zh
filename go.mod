@@ -13,6 +13,6 @@ require (
 
 require (
 	github.com/gopherjs/gopherjs v0.0.0-20220104163920-15ed2e8cf2bd // indirect
-	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c // indirect
+	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
 
 )
